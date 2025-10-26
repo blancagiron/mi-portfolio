@@ -21,7 +21,8 @@ const skillsData = {
     { name: 'Git', color: 'border-red-600 hover:bg-red-600' },
     { name: 'Postman', color: 'border-orange-500 hover:bg-orange-500' },
     { name: 'Jira', color: 'border-blue-600 hover:bg-blue-600' },
-    { name: 'Trello', color: 'border-blue-500 hover:bg-blue-500' }
+    { name: 'Trello', color: 'border-blue-500 hover:bg-blue-500' },
+    { name: 'Docker', color: 'border-green-900 hover:bg-green-900' }
   ],
   web: [
     { name: 'HTML', color: 'border-orange-600 hover:bg-orange-600' },

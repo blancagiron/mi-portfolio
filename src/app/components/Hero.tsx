@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-16 md:gap-24">
           {/* Text Content - Left Side */}
           <div className="flex-1 text-left max-w-2xl space-y-8">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight min-h-[180px] md:min-h-[220px]">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight min-h-[180px] md:min-h-[220px] text-black">
               {text.split('Blanca')[0]}
               <span className="text-blue-400">
                 {text.includes('Blanca') ? text.split('Blanca')[0].length > 0 ? 'Blanca' : '' : ''}
