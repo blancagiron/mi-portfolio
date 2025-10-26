@@ -13,14 +13,14 @@ const Navbar = () => {
         <span className="text-gray-400 text-2xl">|</span>
         <Link 
           href="/gallery" 
-          className="hover:text-blue-500 hover:scale-110 transition-all duration-300"
+          className="hover:text-red-500 hover:scale-110 transition-all duration-300"
         >
           gallery
         </Link>
         <span className="text-gray-400 text-2xl">|</span>
         <Link 
           href="/#contacto" 
-          className="hover:text-blue-500 hover:scale-110 transition-all duration-300"
+          className="hover:text-green-500 hover:scale-110 transition-all duration-300"
         >
           contact
         </Link>
