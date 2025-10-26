@@ -1,36 +1,100 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const phrases = [
+    { start: 'Hola, soy ', name: 'Blanca' },
+    { start: 'Hi, I\'m ', name: 'Blanca' }
+  ];
+
+  useEffect(() => {
+    const currentPhrase = phrases[loopNum % phrases.length];
+    const fullText = currentPhrase.start + currentPhrase.name;
+
+    const handleTyping = () => {
+      if (!isDeleting) {
+        setText(fullText.substring(0, text.length + 1));
+        setTypingSpeed(150);
+
+        if (text === fullText) {
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        setText(fullText.substring(0, text.length - 1));
+        setTypingSpeed(75);
+
+        if (text === '') {
+          setIsDeleting(false);
+          setLoopNum(loopNum + 1);
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed]);
+
   return (
-    <section className="min-h-screen flex items-center justify-center">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 text-center md:text-left">
-        <Image 
-          src="/logo_portfolio.png" 
-          alt="Logo" 
-          width={150} 
-          height={150}
-          className="w-28 h-28 md:w-40 md:h-40"
-        />
-        <div>
-          <TypeAnimation
-            sequence={[
-              'Hola, soy Blanca',
-              2000,
-              "Hi, I'm Blanca",
-              2000,
-            ]}
-            wrapper="h1"
-            speed={50}
-            className="text-4xl md:text-6xl font-bold"
-            repeat={Infinity}
-          />
-          <p className="text-xl md:text-2xl text-gray-700 mt-2">
-            <span className="text-purple-500">Computer Science</span> graduate and <span className="text-orange-500">content creator</span>
-          </p>
+    <section className="min-h-screen flex items-center justify-center px-6 md:px-12 -mt-20">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-16 md:gap-24">
+          {/* Text Content - Left Side */}
+          <div className="flex-1 text-left max-w-2xl space-y-8">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight min-h-[180px] md:min-h-[220px]">
+              {text.split('Blanca')[0]}
+              <span className="text-blue-400">
+                {text.includes('Blanca') ? text.split('Blanca')[0].length > 0 ? 'Blanca' : '' : ''}
+              </span>
+              <span className="animate-pulse">|</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl leading-relaxed">
+              <span className="text-red-500">Computer Science graduate</span> and{' '}
+              <span className="text-orange-500">backend developer</span>.
+            </p>
+            
+            <p className="text-lg md:text-xl leading-relaxed">
+              I enjoy combining <span className="text-pink-500">creative thinking</span> with{' '}
+              <span className="text-green-600">technical tools</span> to design smart, efficient solutions. 
+              I've always loved figuring out how things work, so I chose to become a developer and build my own.
+            </p>
+          </div>
+          
+          {/* Logo - Right Side */}
+          <div className="flex-shrink-0">
+            <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] flex items-center justify-center overflow-hidden transition-transform hover:scale-105 duration-300">
+              <Image 
+                src="/logo_portfolio.png" 
+                alt="Logo" 
+                width={450} 
+                height={450}
+                className="w-full h-full object-contain animate-float"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
