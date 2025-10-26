@@ -4,6 +4,7 @@ import Journey from './components/Journey';
 import Toolbox from './components/Toolbox';
 import About from './components/About';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 export default function Home() {
   return (
@@ -14,11 +15,9 @@ export default function Home() {
       <Toolbox />
       <About />
       <Projects />
+      <Contact />
       <footer id="contacto" className="text-center py-20">
-        <p className="text-lg">Hablemos.</p>
-        <a href="mailto:tuemail@example.com" className="text-xl text-cyan-600 hover:underline font-bold">
-          tuemail@example.com
-        </a>
+        <p className="text-lg">Site under construction. Blanca Girón Ricoy.</p>
       </footer>
     </main>
   );
