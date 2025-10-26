@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-32 container mx-auto px-6 max-w-7xl relative overflow-hidden"
+      className="py-20 md:py-32 container mx-auto px-4 sm:px-6 max-w-7xl relative overflow-hidden"
     >
       {/* Background Phone Icon - hidden on small screens */}
       <div className="hidden md:block absolute left-30 top-1/2 -translate-y-1/2 -translate-x-[15%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] opacity-35 pointer-events-none">
@@ -20,34 +20,34 @@ const Contact = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="flex items-center justify-end mb-16">
-          <h2 className="text-6xl md:text-7xl font-bold text-gray-900">
+        <div className="flex items-center justify-end mb-12 md:mb-16">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900">
             Contact <span className="text-blue-400">me! :)</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left side - Message */}
-          <div className="space-y-6 relative">
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <div className="space-y-4 md:space-y-6 relative">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Got an idea?
               <br />
               <span className="text-red-500">Let's talk!</span>
             </h3>
-            <p className="text-xl md:text-xl text-gray-700 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
               Whether you have a project in mind, want to collaborate, or just
               want to say hi, I'd love to hear from you.
             </p>
           </div>
 
           {/* Right side - Contact Cards */}
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             {/* Email Card */}
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300">
+            <div className="group bg-white rounded-xl md:rounded-2xl p-5 md:p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300 flex-shrink-0">
                   <svg
-                    className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors duration-300"
+                    className="w-6 h-6 md:w-7 md:h-7 text-blue-600 group-hover:text-white transition-colors duration-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -60,9 +60,9 @@ const Contact = () => {
                     />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <p className="text-sm text-gray-500 font-medium">Email</p>
-                  <p className="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-blue-400 transition-colors duration-300">
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs md:text-sm text-gray-500 font-medium">Email</p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-900 group-hover:text-blue-400 transition-colors duration-300 truncate">
                     gironricoyb@gmail.com
                   </p>
                 </div>
@@ -74,26 +74,26 @@ const Contact = () => {
               href="https://www.linkedin.com/in/blancagiroon"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group block bg-white rounded-xl md:rounded-2xl p-5 md:p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300 flex-shrink-0">
                   <svg
-                    className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors duration-300"
+                    className="w-6 h-6 md:w-7 md:h-7 text-blue-600 group-hover:text-white transition-colors duration-300"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <p className="text-sm text-gray-500 font-medium">LinkedIn</p>
-                  <p className="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-blue-400 transition-colors duration-300">
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs md:text-sm text-gray-500 font-medium">LinkedIn</p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-900 group-hover:text-blue-400 transition-colors duration-300">
                     Connect with me
                   </p>
                 </div>
                 <svg
-                  className="w-6 h-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300"
+                  className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -113,12 +113,12 @@ const Contact = () => {
               href="https://github.com/blancagiron"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group block bg-white rounded-xl md:rounded-2xl p-5 md:p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300 flex-shrink-0">
                   <svg
-                    className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors duration-300"
+                    className="w-6 h-6 md:w-7 md:h-7 text-blue-600 group-hover:text-white transition-colors duration-300"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -129,14 +129,14 @@ const Contact = () => {
                     />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <p className="text-sm text-gray-500 font-medium">GitHub</p>
-                  <p className="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-blue-400 transition-colors duration-300">
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs md:text-sm text-gray-500 font-medium">GitHub</p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-900 group-hover:text-blue-400 transition-colors duration-300">
                     Check my projects
                   </p>
                 </div>
                 <svg
-                  className="w-6 h-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300"
+                  className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -155,12 +155,12 @@ const Contact = () => {
             <a
               href="/CV_BGironRicoy.pdf"
               download
-              className="group block bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group block bg-white rounded-xl md:rounded-2xl p-5 md:p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300 flex-shrink-0">
                   <svg
-                    className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors duration-300"
+                    className="w-6 h-6 md:w-7 md:h-7 text-blue-600 group-hover:text-white transition-colors duration-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -173,14 +173,14 @@ const Contact = () => {
                     />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <p className="text-sm text-gray-500 font-medium">Resume</p>
-                  <p className="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-blue-400 transition-colors duration-300">
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs md:text-sm text-gray-500 font-medium">Resume</p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-900 group-hover:text-blue-400 transition-colors duration-300">
                     Download my CV
                   </p>
                 </div>
                 <svg
-                  className="w-6 h-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300"
+                  className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
