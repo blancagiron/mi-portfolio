@@ -41,12 +41,12 @@ const Hero = () => {
   }, [text, isDeleting, loopNum, typingSpeed]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-12 -mt-20">
+    <section className="min-h-screen flex items-center justify-center px-6 md:px-12 pt-24 md:pt-0">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-16 md:gap-24">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24">
           {/* Text Content - Left Side */}
-          <div className="flex-1 text-left max-w-2xl space-y-8">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight min-h-[180px] md:min-h-[220px] text-black">
+          <div className="flex-1 text-left max-w-2xl space-y-6 md:space-y-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight min-h-[140px] sm:min-h-[160px] md:min-h-[220px] text-black">
               {text.split('Blanca')[0]}
               <span className="text-blue-400">
                 {text.includes('Blanca') ? text.split('Blanca')[0].length > 0 ? 'Blanca' : '' : ''}
@@ -54,12 +54,12 @@ const Hero = () => {
               <span className="animate-pulse">|</span>
             </h1>
             
-            <p className="text-xl md:text-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl leading-relaxed">
               <span className="text-red-500">Computer Science graduate</span> and{' '}
               <span className="text-orange-500">backend developer</span>.
             </p>
             
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed">
               I enjoy combining <span className="text-pink-500">creative thinking</span> with{' '}
               <span className="text-green-600">technical tools</span> to design smart, efficient solutions. 
               I've always loved figuring out how things work, so I chose to become a developer and build my own.
@@ -68,7 +68,7 @@ const Hero = () => {
           
           {/* Logo - Right Side */}
           <div className="flex-shrink-0">
-            <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] flex items-center justify-center overflow-hidden transition-transform hover:scale-105 duration-300">
+            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] flex items-center justify-center overflow-hidden transition-transform hover:scale-105 duration-300">
               <Image 
                 src="/logo_portfolio.png" 
                 alt="Logo" 
