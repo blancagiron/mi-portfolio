@@ -9,7 +9,7 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Blanca's Portfolio",
-  description: "Portfolio de una desarrolladora de software",
+  description: "Software Developer Portfolio",
 };
 
 export default function RootLayout({
