@@ -1,9 +1,8 @@
-"use client";
-import Navbar from "../components/Navbar";
-import Image from "next/image";
-import {
-  Github,
-} from "lucide-react";
+'use client';
+import Navbar from '../components/Navbar';
+import Image from 'next/image';
+import { Github, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 
 const techColors: { [key: string]: string } = {
   Java: "border-red-500 bg-red-50 text-red-700",
@@ -29,9 +28,68 @@ const GalleryPage = () => {
       <Navbar />
       <main className="pt-32 min-h-screen bg-stone-100">
         <div className="container mx-auto px-6 max-w-6xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-20 text-center">
-            Project <span className="text-purple-500">Gallery</span>
+          {/* Back button */}
+          <Link 
+            href="/"
+            className="inline-flex items-center gap-2 mb-8 text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span className="font-medium">Back to Home</span>
+          </Link>
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-20 text-center text-black">
+            Project <span className="text-red-500">Gallery</span>
           </h1>
+
+          
+          
+
+          {/* ErasmusUGR */}
+          <section id="ErasmusUGR" className="mb-32">
+            <div className="bg-white rounded-3xl p-10 md:p-14 shadow-md border border-gray-100">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                ErasmusUGR
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                A comprehensive web platform developed as my Final Degree
+                Project (TFG) at the University of Granada. It digitalizes and
+                streamlines the Erasmus+ mobility process, connecting students,
+                tutors, and administrators.
+              </p>
+
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg bg-gray-100 mb-8">
+                <video
+                  controls
+                  poster="/erasmus-thumbnail.png"
+                  className="w-full h-full"
+                >
+                  <source src="/ErasmusUGR/demoErasmus.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div className="flex flex-wrap gap-3 mb-8">
+                {["React", "Vite", "Tailwind CSS", "Flask", "MongoDB"].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className={`text-sm px-4 py-2 rounded-full border-2 font-semibold ${techColors[tech]}`}
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
+
+              <a
+                href="https://github.com/blancagiron/eramus-ugr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full font-semibold transition-colors duration-300"
+              >
+                <Github className="w-5 h-5" /> View on GitHub
+              </a>
+            </div>
+          </section>
 
           {/* MyPaint */}
           <section id="MyPaint" className="mb-32">
@@ -82,53 +140,6 @@ const GalleryPage = () => {
 
               <a
                 href="https://github.com/blancagiron/MyPaint"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full font-semibold transition-colors duration-300"
-              >
-                <Github className="w-5 h-5" /> View on GitHub
-              </a>
-            </div>
-          </section>
-
-          {/* ErasmusUGR */}
-          <section id="ErasmusUGR" className="mb-32">
-            <div className="bg-white rounded-3xl p-10 md:p-14 shadow-md border border-gray-100">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                ErasmusUGR
-              </h2>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                A comprehensive web platform developed as my Final Degree
-                Project (TFG) at the University of Granada. It digitalizes and
-                streamlines the Erasmus+ mobility process, connecting students,
-                tutors, and administrators.
-              </p>
-
-              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg bg-gray-100 mb-8">
-                <video
-                  controls
-                  poster="/erasmus-thumbnail.png"
-                  className="w-full h-full"
-                >
-                  <source src="/ErasmusUGR/demoErasmus.mp4" type="video/mp4" />
-                </video>
-              </div>
-
-              <div className="flex flex-wrap gap-3 mb-8">
-                {["React", "Vite", "Tailwind CSS", "Flask", "MongoDB"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className={`text-sm px-4 py-2 rounded-full border-2 font-semibold ${techColors[tech]}`}
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-
-              <a
-                href="https://github.com/blancagiron/eramus-ugr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full font-semibold transition-colors duration-300"
@@ -213,7 +224,7 @@ const GalleryPage = () => {
 
               <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
                 A full-stack e-commerce web application created for the
-                “Internet Application Development” course. Features product
+                "Internet Application Development" course. Features product
                 browsing, shopping cart, authentication, and admin management
                 dashboard.
               </p>
