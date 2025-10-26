@@ -68,7 +68,7 @@ const Hero = () => {
           
           {/* Logo - Right Side */}
           <div className="flex-shrink-0">
-            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] flex items-center justify-center overflow-hidden transition-transform hover:scale-105 duration-300">
+            <div className="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] flex items-center justify-center overflow-hidden transition-transform hover:scale-105 duration-300">
               <Image 
                 src="/logo_portfolio.png" 
                 alt="Logo" 
